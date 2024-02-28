@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Product</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='add_product.css') }}">
+</head>
+<body>
+    <header>
+        <h1 class="logo">Kazy</h1>
+        <nav class="nav-links">
+          <a href="/">Home</a>
+          <a class="disabled" href="/add_product">Add Product</a>
+        </nav>
+    </header>
+  <div class="container">
+    <h2>Add Product</h2>
+    <form action="/add_product" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" step="0.01" required>
+      <label for="image_url">Category:</label>
+      <input type="text" id="categories" name="categories" required>
+      <label for="image_url">Image URL:</label>
+      <input type="url" id="image_url" name="image_url" required>
+      <button type="submit">Add Product</button>
+    </form>
+  </div>
+</body>
+</html>
